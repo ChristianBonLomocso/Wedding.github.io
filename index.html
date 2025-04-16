@@ -36,6 +36,7 @@
       opacity: 0;
       transition: opacity 1s ease;
       pointer-events: none;
+      padding: 0 5vw;
     }
 
     .overlay.show {
@@ -45,27 +46,36 @@
 
     .card {
       background-color: rgba(0,0,0,0.6);
-      padding: 20px;
-      border-radius: 12px;
-      max-width: 300px;
+      padding: 30px 20px;
+      border-radius: 20px;
+      width: 90vw;
+      max-width: 400px;
       backdrop-filter: blur(6px);
     }
 
     .card img {
-      width: 100px;
-      margin-bottom: 10px;
+      width: 120px;
+      margin-bottom: 15px;
+    }
+
+    .card .date,
+    .card .location,
+    .card .names {
+      margin-top: 10px;
+      font-size: 1.1em;
     }
 
     .rsvp-btn {
-      margin-top: 20px;
+      margin-top: 25px;
       background: #FFD400;
       border: none;
       color: black;
-      padding: 10px 20px;
+      padding: 12px 30px;
       border-radius: 999px;
       font-weight: bold;
-      font-size: 1em;
+      font-size: 1.1em;
       cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
     .start-overlay {
@@ -82,6 +92,7 @@
       text-align: center;
       transition: opacity 1s ease;
       cursor: pointer;
+      padding: 5vh 5vw;
     }
 
     .start-overlay.fade-out {
@@ -90,13 +101,39 @@
     }
 
     .start-overlay h1 {
-      font-size: 2em;
-      margin-bottom: 0.5em;
+      font-size: 8vw;
+      margin-bottom: 1em;
+      word-break: break-word;
     }
 
     .start-overlay p {
-      font-size: 1.1em;
+      font-size: 5vw;
       color: #FFD400;
+    }
+
+    @media (min-width: 600px) {
+      .start-overlay h1 {
+        font-size: 2.5em;
+      }
+
+      .start-overlay p {
+        font-size: 1.3em;
+      }
+
+      .card {
+        width: 360px;
+        padding: 40px 30px;
+      }
+
+      .card .date,
+      .card .location,
+      .card .names {
+        font-size: 1.2em;
+      }
+
+      .rsvp-btn {
+        font-size: 1.2em;
+      }
     }
   </style>
 </head>
@@ -127,7 +164,7 @@
       <div class="location">The Bellevue Resort<br>Panglao, BHL</div>
       <div class="names">💍 Stewart + Shella</div>
     </div>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeD0vRp0Brwn9niu3HVNlbvj0RKnu2o3O6Q0_wAOfBX1w5C3g/viewform?usp=header" target="_blank" class="rsvp-btn">RSVP</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeD0vRp0Brwn9niu3HVNlbvj0RKnu2o3O6Q0_wAOfBX1w5C3g/viewform?usp=header" target="_blank" class="rsvp-btn">RSVP</a>
   </div>
 
   <script>
