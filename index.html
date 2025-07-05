@@ -46,27 +46,27 @@
       pointer-events: all;
     }
 
-    .card-container {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 50px 20px;
-      border-radius: 20px;
-      width: 67vw;
-      max-width: none;
-      height: 40vh;
-      backdrop-filter: blur(6px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+.card-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 4vh 4vw;
+  border-radius: 20px;
+  width: 90vw;
+  max-width: 650px;
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    .save-img {
-      width: 570px;           
-      height: 570px;
-      border-radius: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-    }
+.save-img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
 
     .location {
       font-size: 1.2em;
@@ -155,7 +155,7 @@
 
 .location {
   font-family: 'SpotifyMixBold', sans-serif;
-  font-size: 40px;
+  font-size: clamp(24px, 5vw, 40px);
   letter-spacing: 0.5px;
     text-align: left;
   padding-left: 30px; 
@@ -164,7 +164,7 @@
 
 .place {
   font-family: 'SpotifyMixRegular', sans-serif;
-  font-size: 30px;
+  font-size: clamp(18px, 4vw, 30px);
   color: #ccc;
   margin-bottom: 15px;
   text-align: left;
@@ -194,21 +194,19 @@
 <body>
 
   <!-- Background Video -->
-  <video class="bg-video" autoplay muted loop>
-    <source src="vid.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
+<video class="bg-video" autoplay muted playsinline loop>
+  <source src="vid.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
 
-  <!-- Background Music -->
-  <audio id="bg-music" loop>
-    <source src="background.mp3" type="audio/mpeg">
-  </audio>
+<audio id="bg-music" preload="auto">
+  <source src="background.mp3" type="audio/mpeg">
+</audio>
 
-  <!-- Start Overlay -->
-  <div class="start-overlay" onclick="beginExperience()">
-    <h1>💍 Stewart + Shella</h1>
-    <p>Tap to begin the experience</p>
-  </div>
+<div class="start-overlay" onclick="beginExperience()">
+  <h1>💍 Stewart + Shella</h1>
+  <p>Tap to begin the experience</p>
+</div>
 
   <!-- Main Content -->
   <div class="overlay" id="main-content">
@@ -224,13 +222,17 @@
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeD0vRp0Brwn9niu3HVNlbvj0RKnu2o3O6Q0_wAOfBX1w5C3g/viewform?usp=header" target="_blank" class="rsvp-btn">RSVP</a>
   </div>
 
-  <script>
-    function beginExperience() {
-      document.getElementById('bg-music').play();
-      document.querySelector('.start-overlay').classList.add('fade-out');
-      document.getElementById('main-content').classList.add('show');
-    }
-  </script>
+<script>
+  function beginExperience() {
+    const music = document.getElementById('bg-music');
+    music.play().catch(err => {
+      console.log("Music play blocked or failed:", err);
+    });
+
+    document.querySelector('.start-overlay').classList.add('fade-out');
+    document.getElementById('main-content').classList.add('show');
+  }
+</script>
 
 </body>
 </html>
