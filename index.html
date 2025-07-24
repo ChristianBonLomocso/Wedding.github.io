@@ -66,7 +66,6 @@
       max-width: 650px;
       border-radius: 20px;
       margin-bottom: 15px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
     }
 
     .location {
@@ -83,6 +82,7 @@
       font-size: clamp(18px, 4vw, 30px);
       color: #ccc;
       margin-bottom: 15px;
+	   margin-top: 5px;
       text-align: left;
       padding-inline: 2px;
       width: 100%;
@@ -107,19 +107,19 @@
       vertical-align: middle;
     }
 
-    .rsvp-btn {
-      margin-top: 25px;
-      background: #FFD400;
-      border: none;
-      color: black;
-      padding: 12px 30px;
-      border-radius: 999px;
-      font-weight: bold;
-      font-size: 1.1em;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      text-decoration: none;
-    }
+.rsvp-btn {
+  margin-top: 25px;
+  background: #FFD400;
+  border: none;
+  color: black;
+  padding: 16px 40px; /* Increased padding */
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: clamp(20px, 4vw, 36px); /* Bigger font, responsive */
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-decoration: none;
+}
 
     .start-overlay {
       position: fixed;
@@ -143,17 +143,16 @@
       pointer-events: none;
     }
 
-    .start-overlay h1 {
-      font-size: 8vw;
-      margin-bottom: 1em;
-      word-break: break-word;
-    }
+.start-overlay h1 {
+  font-size: clamp(32px, 6vw, 64px); /* min: 32px, ideal: 6% of width, max: 64px */
+  margin-bottom: 1em;
+  word-break: break-word;
+}
 
-    .start-overlay p {
-      font-size: 5vw;
-      color: #FFD400;
-    }
-
+.start-overlay p {
+  font-size: clamp(18px, 3.5vw, 28px); /* min: 18px, ideal: 3.5% of width, max: 28px */
+  color: #FFD400;
+}
     @font-face {
       font-family: 'SpotifyMixBold';
       src: url('SpotifyMix-Bold.ttf') format('truetype');
@@ -164,19 +163,7 @@
       src: url('SpotifyMix-Regular.ttf') format('truetype');
     }
 
-    @media (min-width: 768px) {
-      .start-overlay h1 {
-        font-size: 2.5em;
-      }
 
-      .start-overlay p {
-        font-size: 1.3em;
-      }
-
-      .rsvp-btn {
-        font-size: 30px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -194,7 +181,7 @@
 
   <!-- Start Overlay -->
   <div class="start-overlay" onclick="beginExperience()">
-    <h1>💍Stewart + Shella</h1>
+    <h1>💍 Stewart + Sheila 💐</h1>
     <p>Tap to begin the experience</p>
   </div>
 
@@ -211,7 +198,7 @@
     </div>
 
     <!-- RSVP Button -->
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeD0vRp0Brwn9niu3HVNlbvj0RKnu2o3O6Q0_wAOfBX1w5C3g/viewform?usp=header" target="_blank" class="rsvp-btn">RSVP</a>
+    <a href="https://withjoy.com/stewart-and-sheila" target="_blank" class="rsvp-btn">RSVP</a>
   </div>
 
   <script>
