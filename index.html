@@ -68,38 +68,39 @@
       margin-bottom: 15px;
     }
 
-    .location {
-      font-family: 'SpotifyMixBold', sans-serif;
-      font-size: clamp(24px, 5vw, 40px);
-      letter-spacing: 0.5px;
-      text-align: left;
-      padding-inline: 2px;
-      width: 100%;
-    }
+.location {
+  font-family: 'SpotifyMixBold', sans-serif;
+  font-size: clamp(30px, 6.5vw, 52px); /* increased slightly */
+  letter-spacing: 0.5px;
+  text-align: left;
+  padding-inline: 2px;
+  width: 100%;
+}
 
-    .place {
-      font-family: 'SpotifyMixRegular', sans-serif;
-      font-size: clamp(18px, 4vw, 30px);
-      color: #ccc;
-      margin-bottom: 15px;
-	   margin-top: 5px;
-      text-align: left;
-      padding-inline: 2px;
-      width: 100%;
-    }
+.place {
+  font-family: 'SpotifyMixRegular', sans-serif;
+  font-size: clamp(24px, 5.5vw, 36px); /* increased slightly */
+  color: #ccc;
+  margin-bottom: 15px;
+  margin-top: 3px;
+  text-align: left;
+  padding-inline: 2px;
+  width: 100%;
+}
 
-    .names {
-      font-size: clamp(20px, 4vw, 32px);
-      font-family: 'SpotifyMixBold', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 10px;
-      padding-inline: 2px;
-      width: 100%;
-      text-align: left;
-      margin-top: 30px;
-    }
+.names {
+  font-size: clamp(26px, 5.5vw, 38px); /* increased slightly */
+  font-family: 'SpotifyMixBold', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-inline: 2px;
+  width: 100%;
+  text-align: left;
+  margin-top: 30px;
+}
+
 
     .name-logo {
       width: 35px;
@@ -144,7 +145,7 @@
     }
 
 .start-overlay h1 {
-  font-size: clamp(32px, 6vw, 64px); /* min: 32px, ideal: 6% of width, max: 64px */
+   font-size: clamp(30px, 5.5vw, 60px); ; /* min: 32px, ideal: 6% of width, max: 64px */
   margin-bottom: 1em;
   word-break: break-word;
 }
@@ -176,7 +177,7 @@
 
   <!-- Background Music -->
   <audio id="bg-music" preload="auto" loop>
-    <source src="background.mp3" type="audio/mpeg">
+    <source src="backgrounds.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Start Overlay -->
@@ -190,7 +191,7 @@
     <div class="card-container">
       <img src="date.jpg" alt="Save the Date" class="save-img">
       <div class="location">Dauis Church |<br>The Bellevue Resort</div>
-      <div class="place">Bohol, Philippines</div>
+      <div class="place">Panglao, Bohol, PH</div>
       <div class="names">
         <img src="logo.png" alt="Logo" class="name-logo">
         Stewart + Sheila
@@ -198,7 +199,7 @@
     </div>
 
     <!-- RSVP Button -->
-    <a href="https://withjoy.com/stewart-and-sheila" target="_blank" class="rsvp-btn">RSVP</a>
+    <a href="https://withjoy.com/stewart-and-sheila" target="_blank" class="rsvp-btn">Tap to RSVP</a>
   </div>
 
   <script>
