@@ -45,29 +45,33 @@
       pointer-events: all;
     }
 
-    .card-container {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 40px;
-      margin-top: min(10vh, 80px);
-      border-radius: 20px;
-      width: 90vw;
-      max-width: 650px;
-      backdrop-filter: blur(6px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
+.card-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  margin-top: min(10vh, 80px);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 450px; /* Reduced max-width to match mobile feel */
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+   margin-top: 10vh;
+}
 
-    .save-img {
-      width: 100%;
-      height: auto;
-      max-width: 650px;
-      border-radius: 20px;
-      margin-bottom: 15px;
-    }
-
+@media (max-width: 767px) {
+  .card-container {
+    margin-top: 25vh; /* True vertical spacing on mobile */
+  }
+}
+.save-img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
 .location {
   font-family: 'SpotifyMixBold', sans-serif;
   font-size: clamp(30px, 6.5vw, 52px); /* increased slightly */
@@ -103,7 +107,7 @@
 
 
     .name-logo {
-      width: 50px;
+      width: 45px;
       height: auto;
       vertical-align: middle;
     }
@@ -182,7 +186,7 @@
 
   <!-- Start Overlay -->
   <div class="start-overlay" onclick="beginExperience()">
-    <h1>💍 Stewart + Sheila 💐</h1>
+    <h1>💍 Stewart + Sheila💐</h1>
     <p>Tap to begin the experience</p>
   </div>
 
